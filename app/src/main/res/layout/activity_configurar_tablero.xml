@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfigurarTablero"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#fff">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_fila_col"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/negro"
+        android:textSize="18dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_row_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Numero de filas"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/row_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_col_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Numero de columnas"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/col_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_jugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jugar"
+            android:layout_marginRight="8dp"
+            android:onClick="btCancelarClick"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCrear"
+            android:enabled="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear tablero"
+            android:onClick="btCrearTablero"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+
+    </LinearLayout>
+
+</LinearLayout>

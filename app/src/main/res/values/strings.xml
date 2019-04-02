@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Torre y Alfil</string>
+    <string name="consola">Nueva partida</string>
+    <string name="text_fila_col">Especifique el numero de filas y columnas que desea tener en el tablero de juego</string>
+</resources>

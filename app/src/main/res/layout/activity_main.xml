@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mesa"
+    tools:context=".MainActivity">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/tablero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:alignmentMode="alignMargins"
+        app:columnCount="9"
+        app:layout_constraintBottom_toTopOf="@+id/caja_fichas"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:rowCount="9"
+        app:rowOrderPreserved="false">
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <LinearLayout
+        android:id="@+id/caja_fichas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/scroll_console"
+        app:layout_constraintTop_toBottomOf="@+id/tablero"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:id="@+id/alfil_blanco"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_alfil_blanco" />
+
+        <ImageView
+            android:id="@+id/torre_blanca"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_torre_blanca" />
+
+        <ImageView
+            android:id="@+id/alfil_negro"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_alfil_negro" />
+
+        <ImageView
+            android:id="@+id/torre_negra"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_torre_negra" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scroll_console"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/tablero"
+        android:layout_marginTop="5dp"
+        android:background="@color/negro"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/caja_fichas"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <TextView
+            android:id="@+id/consola"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/consola"
+            android:textColor="@color/blanco"
+            android:gravity="bottom"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
